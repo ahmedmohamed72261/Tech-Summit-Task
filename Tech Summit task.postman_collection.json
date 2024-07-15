@@ -1,0 +1,491 @@
+{
+	"info": {
+		"_postman_id": "ac392cd4-e7a0-46d6-97b8-2ed68bf7a3d9",
+		"name": "Tech Summit task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29980792"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "signUp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "firstName",
+									"value": "ahmed",
+									"type": "text"
+								},
+								{
+									"key": "lastName",
+									"value": "samir",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "ahmed@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "ahmed123",
+									"type": "text"
+								},
+								{
+									"key": "pic",
+									"type": "file",
+									"src": "/D:/My Cv/myPic/ahmed samir.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/signUp",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"signUp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signIn",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"m.serag1905@gmail.com\",\r\n    \"password\":\"mohamed123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/signIn",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"signIn"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllUsers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/user/getAllUsers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"getAllUsers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateAccount",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accessToken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im0uc2VyYWcxOTA1QGdtYWlsLmNvbSIsImlkIjoiNjY5MzAzNzQxM2MzZTFjNmJhNGMxMThmIiwiaWF0IjoxNzIwOTEwNzExLCJleHAiOjE3MjA5MTQzMTF9.qkowwULLBnDuhjb6a82xQi8S5xaxCtjfYkEK5d6xXp0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "newEmail",
+									"value": "m.serag19053@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "newFName",
+									"value": "medo",
+									"type": "text"
+								},
+								{
+									"key": "newLName",
+									"value": "hany",
+									"type": "text"
+								},
+								{
+									"key": "oldPublicId",
+									"value": "Task Manager/bwOKWpAsQUNxt/cwnrubysmnarnou7vzpk",
+									"type": "text"
+								},
+								{
+									"key": "pic",
+									"type": "file",
+									"src": "/D:/My Cv/myPic/ahmed samir.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/updateAccount",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"updateAccount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteAccount",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accessToken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im0uc2VyYWcxOTA1QGdtYWlsLmNvbSIsImlkIjoiNjY5MzAzNzQxM2MzZTFjNmJhNGMxMThmIiwiaWF0IjoxNzIwOTEwNzExLCJleHAiOjE3MjA5MTQzMTF9.qkowwULLBnDuhjb6a82xQi8S5xaxCtjfYkEK5d6xXp0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/user/deleteAccount",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"deleteAccount"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "categories",
+			"item": [
+				{
+					"name": "addCategory",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accessToken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im0uc2VyYWcxOTA1QGdtYWlsLmNvbSIsImlkIjoiNjY5MzlmNWQyNjAwNjIwYTcxMDYzYmViIiwiaWF0IjoxNzIwOTUxMDIwLCJleHAiOjE3MjA5NTQ2MjB9.dvLDfhdj7-O2LPFi3GQpVeGhBIc3j2ZR7-Br6M4TKN8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"categoryType\":\"To Do\",\r\n    \"name\":\"first task\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/category/addCategory",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"category",
+								"addCategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCategory",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accessToken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im0uc2VyYWcxOTA1QGdtYWlsLmNvbSIsImlkIjoiNjY5MzlmNWQyNjAwNjIwYTcxMDYzYmViIiwiaWF0IjoxNzIwOTUzNjQ1LCJleHAiOjE3MjA5NTcyNDV9.dt0EzRx-CtYaS_YhpEeoCbxVPdlgg6DVbrR0HT1X-6M",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"oldCategoryType\":\"To Do\",\r\n    \"newName\":\"user Schema\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/category/updateCategory",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"category",
+								"updateCategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCategory",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accessToken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFiZGVscmFobWFuQGdtYWlsLmNvbSIsImlkIjoiNjY5MzlmYzYyNjAwNjIwYTcxMDYzYmVlIiwiaWF0IjoxNzIwOTU4MjQ5LCJleHAiOjE3MjA5NjE4NDl9.IlX1S0CNJg21IXqjbQQLQxnjq76iq4gFgx1ldLnkpv0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/category/deleteCategory/6693ba15f68c585aa6d0df72",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"category",
+								"deleteCategory",
+								"6693ba15f68c585aa6d0df72"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllCategories",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "getCategoryByName",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"user1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/category/getCategoryByName",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"category",
+								"getCategoryByName"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tasks",
+			"item": [
+				{
+					"name": "addTask",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accessToken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im0uc2VyYWcxOTA1QGdtYWlsLmNvbSIsImlkIjoiNjY5MzlmNWQyNjAwNjIwYTcxMDYzYmViIiwiaWF0IjoxNzIwOTYxNzI1LCJleHAiOjE3MjA5NjUzMjV9.sgdSHBH2v7t5CDVwUCkSSE210asWNUW5GZQqm3HbqPA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"task 3\",\r\n    \"TextBody\":\"job board frontend\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/tasks/addTask?categoryId=6693b644f997a01601c74caa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tasks",
+								"addTask"
+							],
+							"query": [
+								{
+									"key": "categoryId",
+									"value": "6693b644f997a01601c74caa"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllPublicTasks",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "getPrivateTasks",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accessToken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFobWVkQGdtYWlsLmNvbSIsImlkIjoiNjY5M2EwY2EyNjAwNjIwYTcxMDYzYmY1IiwiaWF0IjoxNzIwOTY3NDUwLCJleHAiOjE3MjA5NzEwNTB9.VSd5VzzWiNrSAHzyImT-mrXqzafYdIcoRzzJwSMAeN0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/tasks/getPrivateTasks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tasks",
+								"getPrivateTasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteTask",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accessToken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im0uc2VyYWcxOTA1QGdtYWlsLmNvbSIsImlkIjoiNjY5MzlmNWQyNjAwNjIwYTcxMDYzYmViIiwiaWF0IjoxNzIwOTY3OTE4LCJleHAiOjE3MjA5NzE1MTh9.wil28TlnxvLkSyUhhkMsSe17j_ka5hjkCF3EPMfdcLk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/tasks/deleteTask?taskId=6693d35c4d074a7025e507ed",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tasks",
+								"deleteTask"
+							],
+							"query": [
+								{
+									"key": "taskId",
+									"value": "6693d35c4d074a7025e507ed"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateTask",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accessToken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im0uc2VyYWcxOTA1QGdtYWlsLmNvbSIsImlkIjoiNjY5MzlmNWQyNjAwNjIwYTcxMDYzYmViIiwiaWF0IjoxNzIwOTczMTM1LCJleHAiOjE3MjA5NzY3MzV9.OeqRtSRw3s4tvR9Y_nzxradb6q04pdYzRlU7iVBkH8Y",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"newTitle\":\"task 25\",\r\n    \"newTextBody\":\"landing page\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/tasks/updateTask?taskId=6693d28676b1f16621f2f617",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tasks",
+								"updateTask"
+							],
+							"query": [
+								{
+									"key": "taskId",
+									"value": "6693d28676b1f16621f2f617"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
